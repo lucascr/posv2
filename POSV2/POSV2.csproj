@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{154E131D-FDA2-4655-BA99-96F601E4B956}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>POSV2</RootNamespace>
+    <AssemblyName>POSV2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.socialymas.com/pos/posv2/</InstallUrl>
+    <SupportUrl>http://www.socialymas.com</SupportUrl>
+    <ErrorReportUrl>http://www.socialymas.com</ErrorReportUrl>
+    <ProductName>POS V2</ProductName>
+    <PublisherName>Socialymas.com</PublisherName>
+    <SuiteName>POS V2</SuiteName>
+    <MinimumRequiredVersion>1.0.0.17</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>320</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>POSV2.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>990A66BB290B248AFACF245BFF4BD88773DDD72F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>symposv3.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono_pos_wfu_icon_white_TBk_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.14.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.14.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>report\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cba.cs" />
+    <Compile Include="cbc.cs" />
+    <Compile Include="class_import.cs" />
+    <Compile Include="class_xls_import.cs" />
+    <Compile Include="frm_academia_cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_academia_cursos.Designer.cs">
+      <DependentUpon>frm_academia_cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_invoice_asadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_invoice_asadas.Designer.cs">
+      <DependentUpon>frm_invoice_asadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_cabys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_cabys.Designer.cs">
+      <DependentUpon>frm_pos_cabys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_cxc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_cxc.Designer.cs">
+      <DependentUpon>frm_pos_cxc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_gastos.Designer.cs">
+      <DependentUpon>frm_pos_gastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_invoice_recibir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_invoice_recibir.Designer.cs">
+      <DependentUpon>frm_pos_invoice_recibir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_invoice_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_invoice_report.Designer.cs">
+      <DependentUpon>frm_pos_invoice_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_millenium_invoice_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_millenium_invoice_product.Designer.cs">
+      <DependentUpon>frm_pos_millenium_invoice_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="invoice_product_CanastaBasica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invoice_product_CanastaBasica.Designer.cs">
+      <DependentUpon>invoice_product_CanastaBasica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYMPOS_asadas.cs" />
+    <Compile Include="SYMPOS_internet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="invoice_generate_html.cs" />
+    <Compile Include="offline.cs" />
+    <Compile Include="SYMPOS_API_clientes.cs" />
+    <Compile Include="cbi.cs" />
+    <Compile Include="csym.cs" />
+    <Compile Include="db.cs" />
+    <Compile Include="encryptdecrypt.cs" />
+    <Compile Include="SYMPOS_db_backup.cs" />
+    <Compile Include="SYMPOS_local_fe.cs" />
+    <Compile Include="first.cs" />
+    <Compile Include="frm_pos_clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_clients.Designer.cs">
+      <DependentUpon>frm_pos_clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_invoice.Designer.cs">
+      <DependentUpon>frm_pos_invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_login.Designer.cs">
+      <DependentUpon>frm_pos_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_config.Designer.cs">
+      <DependentUpon>frm_pos_config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_main.Designer.cs">
+      <DependentUpon>frm_pos_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_invoice_maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_invoice_maintenance.Designer.cs">
+      <DependentUpon>frm_pos_invoice_maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_products.Designer.cs">
+      <DependentUpon>frm_pos_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pos_users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pos_users.Designer.cs">
+      <DependentUpon>frm_pos_users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="invoice_price_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invoice_price_modal.Designer.cs">
+      <DependentUpon>invoice_price_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="invoice_product_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invoice_product_modal.Designer.cs">
+      <DependentUpon>invoice_product_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lv_names.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexUtilities.cs" />
+    <Compile Include="SYMPOS_API_Fe.cs" />
+    <Compile Include="SYMPOSprint.cs" />
+    <Compile Include="sympos_wb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sympos_wb.Designer.cs">
+      <DependentUpon>sympos_wb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="varAPILicense.cs" />
+    <Compile Include="varAPIVersion.cs" />
+    <Compile Include="varAPIClientes.cs" />
+    <Compile Include="VarCompany.cs" />
+    <Compile Include="VarMillenium.cs" />
+    <EmbeddedResource Include="frm_academia_cursos.resx">
+      <DependentUpon>frm_academia_cursos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_invoice_asadas.resx">
+      <DependentUpon>frm_invoice_asadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_cabys.resx">
+      <DependentUpon>frm_pos_cabys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_cxc.resx">
+      <DependentUpon>frm_pos_cxc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_gastos.resx">
+      <DependentUpon>frm_pos_gastos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_clients.resx">
+      <DependentUpon>frm_pos_clients.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_invoice.resx">
+      <DependentUpon>frm_pos_invoice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_invoice_recibir.resx">
+      <DependentUpon>frm_pos_invoice_recibir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_invoice_report.resx">
+      <DependentUpon>frm_pos_invoice_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_login.resx">
+      <DependentUpon>frm_pos_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_config.resx">
+      <DependentUpon>frm_pos_config.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_main.resx">
+      <DependentUpon>frm_pos_main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_invoice_maintenance.resx">
+      <DependentUpon>frm_pos_invoice_maintenance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_millenium_invoice_product.resx">
+      <DependentUpon>frm_pos_millenium_invoice_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_products.resx">
+      <DependentUpon>frm_pos_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pos_users.resx">
+      <DependentUpon>frm_pos_users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invoice_price_modal.resx">
+      <DependentUpon>invoice_price_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invoice_product_CanastaBasica.resx">
+      <DependentUpon>invoice_product_CanastaBasica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invoice_product_modal.resx">
+      <DependentUpon>invoice_product_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="sympos_wb.resx">
+      <DependentUpon>sympos_wb.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="txt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Google.Protobuf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Ubiety.Dns.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icono_pos_WfU_icon.ico" />
+    <Content Include="icono_pos_wfu_icon_white_TBk_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
